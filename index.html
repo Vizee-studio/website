@@ -63,16 +63,17 @@
     ></script>
     <script src="https://browser.sentry-cdn.com/7.60.0/bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://browser.sentry-cdn.com/7.60.0/bundle.min.js" crossorigin="anonymous"></script>
-  <script>
-    var environment = "production"; 
-    var release = "vizee@1.0.0"; 
+  <script type="module">
+    if (import.meta.env.DEV) {
+      console.warn = () => {};
+    }
 
     Sentry.init({
-      dsn: "https://5d791a582f684390a65c2ee5a03dde4f@app.glitchtip.com/10876",
+      dsn: import.meta.env.VITE_SENTRY_DNS,
       tracesSampleRate: 0.1,
-      environment: environment,
-      release: release,
-      debug: environment !== "production",
+      environment: import.meta.env.VITE_ENVIROMENT,
+      release: import.meta.env.VITE_RELEASE,
+      debug: import.meta.env.VITE_ENVIROMENT !== "production",
       attachStacktrace: true,
       maxBreadcrumbs: 50,
       beforeSend: function(event, hint) {
