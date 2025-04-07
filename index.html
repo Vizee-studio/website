@@ -63,7 +63,11 @@
     ></script>
     <script src="https://browser.sentry-cdn.com/7.60.0/bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://browser.sentry-cdn.com/7.60.0/bundle.min.js" crossorigin="anonymous"></script>
-  <script>
+  <script type="module">
+    if (import.meta.env.DEV) {
+      console.warn = () => {};
+    }
+
     Sentry.init({
       dsn: import.meta.env.VITE_SENTRY_DNS,
       tracesSampleRate: 0.1,
