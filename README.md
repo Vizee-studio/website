@@ -1,6 +1,7 @@
 # Vizee Web – Internal Developer Documentation
 
 ## 1. Project Overview
+
 **Project**: Vizee Web  
 **Type**: Internal Website Project for Vizee Creative Studio  
 **Goal**: Showcase Vizee's digital design and branding services with a modern, fast, and responsive site.
@@ -8,6 +9,7 @@
 ---
 
 ## 2. Tech Stack & Tooling
+
 - Vite (build tool for fast development and optimized builds)
 - HTML/CSS with Framer-generated structure
 - Prettier (code formatter)
@@ -18,6 +20,7 @@
 ---
 
 ## 3. NPM Scripts
+
 These scripts are defined in `package.json`:
 
 ```json
@@ -29,14 +32,15 @@ These scripts are defined in `package.json`:
 }
 ```
 
-- `dev`: Starts the local development server  
-- `build`: Produces a production-ready build  
-- `preview`: Serves the build locally for testing  
+- `dev`: Starts the local development server
+- `build`: Produces a production-ready build
+- `preview`: Serves the build locally for testing
 - `format`: Applies Prettier formatting across the codebase
 
 ---
 
 ## 4. File Structure & Notes
+
 - `index.html`: Root HTML, contains meta tags, Framer-generated scripts, and layout structure.
 - Project is likely hosted on Framer based on metadata.
 - Static site, can be extended with JavaScript for interactivity or deployed as-is.
@@ -59,6 +63,7 @@ npm run dev
 ---
 
 ## 6. Code Formatting & Standards
+
 - Use `npm run format` before commits.
 - Follow Prettier configuration to maintain consistent code style.
 - Avoid manual changes to `index.html` if managed by Framer.
@@ -66,6 +71,7 @@ npm run dev
 ---
 
 ## 7. Deployment
+
 - Site is buildable using `vite build`.
 - Built files are output in `dist/` folder and can be hosted via Vercel, Netlify, GitHub Pages, or Framer.
 - Canonical and OpenGraph metadata in `index.html` point to: [https://expansive-lot-537569.framer.app](https://expansive-lot-537569.framer.app)
@@ -73,5 +79,6 @@ npm run dev
 ---
 
 ## 8. Potential Improvements
+
 - Modularize styles or move to SCSS/PostCSS for scalability.
 - Introduce deployment script for automated Vercel/Netlify pushes.
