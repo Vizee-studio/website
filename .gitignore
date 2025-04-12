@@ -23,8 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+.qodo
+
 .env
-.env.local
-.env.development
-.env.production
-.env.test
